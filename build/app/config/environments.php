@@ -37,11 +37,11 @@ return [
     'development' => [
         'extends'   => 'bootstrap',
         'debug'     => true,
-        'siteurl'   => 'http://opa0007.dev.haverhilldevserver.com',
-        'dbhost'    => 'mysql.haverhilldevserver.com',
-        'dbname'    => 'db_dev_opa0007',
-        'dbpass'    => 'usr_dev_opa0007',
-        'dbuser'    => 'aTW4r!!FfR9zZYB9',
+        'siteurl'   => 'http://searchit.jacobdeveloper.com',
+        'dbhost'    => '23157.m.tld.pl',
+        'dbname'    => 'baza23157_searchit',
+        'dbpass'    => '4Rb{rPiL6Q',
+        'dbuser'    => 'admin23157_searchit',
     ],
 
     'dev_jacob' => [
