@@ -1,0 +1,162 @@
+//Contact summary
+
+.contact-summary
+	background-color: #FFFFFF
+	text-align: center
+	padding: 20px
+
+.contact-summary__img
+	margin-bottom: 15px
+	max-height: 80px
+	@media (max-width: $tablet-med-width)
+		max-height: 70px
+
+.contact-summary__details
+	margin: 0
+	@media (max-width: $tablet-med-width)
+		font-size: 14px
+
+.contact-summary__tel
+	margin-right: 20px
+	@media (max-width: $tablet-xsml-width)
+		margin-right: 0px
+		display: block
+
+
+// /Contact summary
+
+//Footer main
+footer
+	background-color: $secondary-bg-colour
+
+.footer
+	display: flex
+	padding: 50px 0 50px 0
+	font-size: 14px
+	@media (max-width: $tablet-sml-width)
+		padding: 40px 0 40px 0
+	@media (max-width: $tablet-xsml-width)
+		flex-wrap: wrap
+		padding: 40px
+
+.footer-third
+	width: 100%
+	padding: 0 30px 0 30px
+	@media (max-width: $tablet-xsml-width)
+		padding: 0px
+	&:not(:last-child)
+		border-right: solid 1px $seperator-colour
+		@media (max-width: $tablet-xsml-width)
+			border-right: none
+			margin-bottom: 20px
+			padding-bottom: 10px
+			border-bottom: solid 1px $seperator-colour
+
+.footer-third p:first-child
+	margin-top: -5px
+	@media (max-width: $tablet-xsml-width)
+		margin-top: 0px
+
+.footer-menu
+	padding-left: 50px
+	@media (max-width: $tablet-sml-width)
+		padding-left: 40px
+	@media (max-width: $tablet-xsml-width)
+		padding-left: 0px
+
+.footer-info
+	padding-right: 50px
+	@media (max-width: $tablet-sml-width)
+		padding-right: 40px
+	@media (max-width: $tablet-xsml-width)
+		padding-right: 0px
+
+.footer p, .footer ul, .footer li
+	color: #ffffff
+
+	//Footer-menu
+
+.footer-menu
+	position: relative
+
+.footer-menu__list
+	margin: 0
+	padding: 0
+	list-style: none
+
+.footer-menu__title
+	margin-bottom: 20px
+
+.footer-menu__list-item
+	margin-bottom: 20px
+
+.footer-menu__link
+	font-weight: 500
+	@include anchor-colour(#ffffff)
+
+p.honest-watermark
+	position: absolute
+	bottom: 0
+	font-size: 14px
+	color: rgba(#ffffff, 0.5)
+	padding-right: 20px
+	@media (max-width: $tablet-xsml-width)
+		position: static
+
+	// /Footer-menu
+
+	//Footer info
+
+.footer-info__boxing
+	background-color: #ffffff
+	padding: 10px
+	overflow: auto
+	margin-top: 50px
+	@media (max-width: $tablet-xsml-width)
+		margin-top: 20px
+
+.footer-info__ives-boxing
+	height: 80px
+	float: left
+	margin-right: 10px
+	@media (max-width: $tablet-sml-width)
+		margin-bottom: 10px
+		float: none
+	@media (max-width: $tablet-xsml-width)
+		float: left
+
+p.footer-info__boxing-info
+	color: $text-background
+	margin: 0
+
+	// /Footer info
+
+// /Footer main
+
+//Pre footer
+
+.footer-categories__cont
+	background-color: $main-bg-colour
+
+.footer-categories__tile
+	position: relative
+	width: 25%
+	background: url('#{$image-path}/350x300.png') center/cover no-repeat
+	min-height: 100px
+
+.footer-categories__tile-title
+	width: 70%
+	@media(max-width: $tablet-lrg-width)
+		width: 80%
+
+@include flex-grid-internal(pre-footer, 4, 0, (tile, min-height, 100px))
+@media(max-width: $tablet-sml-width)
+	@include flex-grid-internal-mod(pre-footer, 2, 10px, (tile, min-height, 150px))
+
+.pre-footer-masonry-tile__text
+	@include head-font("sml", null, null)
+	@media(max-width: $mobile-med-width)
+		font-size: 18px
+
+
+// /Pre footer

@@ -1,0 +1,1 @@
+<?php require $this->path('theme.root', 'page.php'); ?>

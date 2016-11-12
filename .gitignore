@@ -1,0 +1,8 @@
+/.phpintel/
+/prototype/node_modules
+/build/node_modules
+/prototype/.sass-cache
+!/.gitignore
+/design
+/.DS_Store
+.DS_Store

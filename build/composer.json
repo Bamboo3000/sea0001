@@ -1,0 +1,53 @@
+{
+  "name": "smrtr/wp-vanilla",
+  "description": "A smrtr-flavoured vanilla wordpress project",
+  "keywords": ["smrtr", "wordpress", "vanilla", "composer", "skeleton", "cms", "blog", "framework"],
+  "authors": [
+    {
+      "name": "Joe Green",
+      "homepage": "http://smrtr.co.uk"
+    },
+    {
+      "name": "Mwayi Dzanjalimodzi",
+      "homepage": "http://smrtr.co.uk"
+    }
+  ],
+  "type": "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://satis.smrtr.co.uk/"
+    },
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "~1.0",
+    "smrtr/wp-core": "~4.2.2",
+    "smrtr/wp-foundation": "1.x-dev",
+    "smrtr/wp-vanilla-tools": "dev-master",
+    "wpackagist-plugin/custom-options-plus": "~1.5.0",
+    "wpackagist-plugin/enhanced-media-library": "2.1.3",
+    "wpackagist-plugin/mce-table-buttons": "3.2",
+    "wpackagist-plugin/regenerate-thumbnails": "~2.2.4",
+    "wpackagist-plugin/safe-redirect-manager": "1.7.8",
+    "wpackagist-plugin/simple-custom-post-order": "2.3",
+    "wpackagist-plugin/wordpress-seo": "~3.0.5",
+    "wpackagist-plugin/wp-smushit": "2.1.4",
+    "danielstjules/php-pretty-datetime": "dev-master",
+    "abraham/twitteroauth": "^0.6.4",
+    "mobiledetect/mobiledetectlib": "^2.8"
+  },
+  "extra": {
+    "wordpress-core-install-dir": "public/wp-core",
+    "installer-paths": {
+      "public/wp-app/mu-plugins/{$name}": [
+        "smrtr/wp-foundation"
+      ],
+      "public/wp-app/plugins/{$name}": ["type:wordpress-plugin"]
+    }
+  }
+}

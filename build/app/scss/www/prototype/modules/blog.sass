@@ -1,0 +1,135 @@
+//Category dropdown
+
+.category-filter
+	padding: 20px 0
+
+.category-filter__dropdown
+	-webkit-appearance: none
+	border: 1px solid $brand-colour
+	@include body-font("sml", 700, $brand-colour)
+	padding: 5px 10px
+	display: inline-block
+	width: 100%
+
+.category-filter__inner
+	position: relative
+	display: inline-block
+	width: 100%
+	max-width: 300px
+	i
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 10px
+		font-size: 12px
+		color: $brand-colour
+
+// /Category dropdown
+
+
+//Blog grid
+
+@include flex-grid-internal(blog, 3, 20px, null)
+@media(max-width: $tablet-med-width)
+	@include flex-grid-internal-mod(blog, 2, null, null)
+@media(max-width: $tablet-xsml-width)
+	@include flex-grid-internal-mod(blog, 1, null, null)
+
+// /Blog grid
+
+
+//Pagination elem
+
+.pagination__container
+	text-align: center
+	margin: 30px 0
+
+.pagination__elem
+	position: relative
+	margin: 25px
+	z-index: 0
+	display: inline-block
+	@include body-font("med", 700, null)
+	&:focus
+		outline: none
+	& i
+		transition: transform ease-in-out 300ms
+	@media (max-width: $tablet-xsml-width)
+		@include body-font("sml", 700, null)
+		margin: 16px
+
+.pagination__number::before, .pagination__arrow::before
+	content: ""
+	display: block
+	position: absolute
+	z-index: -1
+	top: 50%
+	left: 50%
+	transform: translateX(-50%) translateY(-50%)
+	border-radius: 100%
+	transition: transform ease-in-out 300ms
+
+.pagination__number
+	@include anchor-colour($brand-colour)
+	&:hover::before
+		border: 1px solid $brand-colour
+
+
+.pagination__number::before
+	background-color: #FFFFFF
+	border: 1px solid #FFFFFF
+	width: 50px
+	height: 50px
+	@media (max-width: $tablet-xsml-width)
+		height: 40px
+		width: 40px
+
+.pagination__arrow
+	margin: 0
+	@include anchor-colour(#FFFFFF)
+	height: 40px
+	width: 40px
+	border-radius: 100%
+	& i
+		line-height: 40px
+		@media (max-width: $tablet-xsml-width)
+			line-height: 30px
+	@media (max-width: $tablet-xsml-width)
+		height: 30px
+		width: 30px
+		margin: 5px
+	&:hover::before
+		background-color: $darker-brand-colour
+
+.pagination__arrow::before
+	background-color: $brand-colour
+	height: 40px
+	width: 40px
+	top: 49%
+	@media (max-width: $tablet-xsml-width)
+		height: 30px
+		width: 30px
+
+.pagination__dots
+	margin: 10px
+	@media (max-width: $tablet-xsml-width)
+		margin: 5px
+
+.pagination__left
+	&::before
+		left: 52%
+	&:hover i
+		transform: translateX(-3px)
+
+.pagination__right
+	&::before
+		left: 48%
+	&:hover i
+		transform: translateX(3px)
+
+.pagination__current-page
+	@include anchor-colour(#000000)
+	&::before
+		border: 1px solid $brand-colour
+
+// /Pagination elem

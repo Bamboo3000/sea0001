@@ -1,0 +1,79 @@
+//Process elem
+
+.process-container
+	padding: 50px 20px
+
+.process-container .process__elem:not(:first-child)
+	padding-top: 30px
+
+.process__elem
+	display: flex
+
+.process__svg-cont
+	padding: 10px
+	padding-top: 0px
+
+.process__svg
+	width: 140px
+	height: 140px
+
+.process__copy
+	max-width: 650px
+	background-color: #FFFFFF
+	border-bottom: 5px solid $lighter-brand-colour
+	position: relative
+	padding: 10px
+	padding-left: 60px
+
+.process__number-cont
+	position: absolute
+	left: 15px
+	top: -6px
+	background-color: $brand-colour
+	width: 30px
+	height: 60px
+	text-align: center
+
+.process__number
+	margin: 0px
+	vertical-align: bottom
+	margin-top: 30px
+	color: #FFFFFF
+
+.process__number::before
+	content: ""
+	display: block
+	position: absolute
+	left: -6px
+	top: 0
+	border-right: solid 3px $darker-brand-colour
+	border-bottom: solid 3px $darker-brand-colour
+	border-left: solid 3px transparent
+	border-top: solid 3px transparent
+
+.process__elem--right
+	flex-direction: row-reverse
+	& .process__svg-cont
+		margin-left: 20px
+	& .process__copy
+		margin-left: 30%
+		@media(max-width: $tablet-med-width)
+			margin-left: 40px
+
+.process__elem--left
+	& .process__svg-cont
+		margin-right: 20px
+	& .process__copy
+		margin-right: 30%
+		@media(max-width: $tablet-med-width)
+			margin-right: 40px
+
+.process__elem--left, .process__elem--right
+	@media(max-width: $tablet-xsml-width)
+		flex-direction: column
+		align-items: center
+		margin-top: 50px
+		& .process__copy
+			margin: 0
+
+// /Process elem

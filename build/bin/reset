@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+vendor/bin/wp db reset
+bin/install $1 -fe

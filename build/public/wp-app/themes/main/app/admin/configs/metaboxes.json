@@ -1,0 +1,30 @@
+{
+	"title": {
+		"type": ["page", "post"]
+	}
+	// "editor": {
+	// 	"type":  ["post"]
+	// }
+	// "hero": {
+	// 	"type": ["page"]
+	// },
+	// "simple-cta": {
+	// 	"template": ["tpl-process.php", "tpl-audience.php", "tpl-products.php"],
+	// 	"type": ["blog"]
+	// },
+	// "blog-cta": {
+	// 	"type": ["blog"]
+	// },
+	// "simple-title": {
+	// 	"template": ["tpl-work.php"]
+	// },
+	// "page": {
+	// 	"type": ["blog"]
+	// },
+	// "featured": {
+	// 	"type": ["blog"]
+	// },
+	// "contact": {
+	// 	"template": ["tpl-contact.php"]
+	// }
+}

@@ -1,0 +1,87 @@
+
+// Masonry
+
+.home-masonry
+	padding: $home-masonry-gutter
+
+.home-masonry__inner
+	height: 620px
+	margin-top: -#{$home-masonry-gutter}
+	margin-left: -#{$home-masonry-gutter}
+	@media(max-width: $tablet-med-width)
+		height: 1000px
+	@media(max-width: $tablet-xsml-width)
+		height: 850px
+	@media(max-width: $mobile-lrg-width)
+		height: 1000px
+
+.home-masonry__inner > .masonry
+	width: 50%
+	@media(max-width: $tablet-med-width)
+		width: 100%
+
+.home-masonry__inner .masonry:first-child .masonry-tile
+	width: 50%
+	display: flex
+
+.home-masonry__inner .masonry:nth-child(2)
+
+.home-masonry__inner .masonry:nth-child(2) .masonry-tile
+	width: 100%
+	display: flex
+
+.home-masonry__tile
+	padding-top: $home-masonry-gutter
+	padding-left: $home-masonry-gutter
+
+.home-masonry-tile__title--bars::after
+	background-color: $bars-colour
+
+.home-masonry-tile__title--drinks::after
+	background-color: $drinks-colour
+
+.home-masonry-tile__title--supplements::after
+	background-color: $supplements-colour
+
+.home-masonry-tile__title--ingredients::after
+	background-color: $ingredients-colour
+
+.home-masonry-tile__title--nutritional::after
+	background-color: $brand-colour
+
+.home-masonry__bars, .home-masonry__drinks, .home-masonry__supplements, .home-masonry__ingredients, 
+	background: url('#{$image-path}/350x300.png') center/cover no-repeat
+
+.home-masonry__nutritional
+	background: url('#{$image-path}/700x610.png') center/cover no-repeat
+
+// /Masonry
+
+//Text points
+
+.home-text-point
+	width: 250px
+	margin: 0 auto
+
+.home-text-point object
+	height: 35px
+
+// /Text points
+
+//Tile articles
+
+.home-tile-article__img
+	background: url('#{$image-path}/430x250.png') center/cover no-repeat
+
+.home-tile-article__tile
+	margin: 0 auto
+
+.home-blog-tiles__cta
+	text-align: center
+	padding: 40px 0 40px 0
+	margin-bottom: 40px
+
+.home-tile-article__container
+	padding: 0 10px 0 10px
+ 
+// /Text points

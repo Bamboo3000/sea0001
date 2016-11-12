@@ -1,0 +1,650 @@
+//Hero
+
+.hero
+	padding: 20px
+	box-sizing: border-box
+	display: flex
+	align-items: center
+	position: relative
+
+.hero-text p, .hero-text h1
+	color: #FFFFFF
+
+.hero-title
+	font-family: Droid Serif, serif
+	font-size: 50px
+
+.hero-header
+	font-size: 16px
+
+.hero-title, .hero-header
+	margin: 0
+
+.hero-copy
+	margin-top: 20px
+	margin-bottom: 20px
+	font-size: 18px
+	max-width: 550px
+
+.hero-down-cta
+	position: absolute
+	bottom: 30px
+	left: 50%
+	transform: translateX(-50%)
+
+.hero--full
+	background: url('#{$image-path}/1420x700.png') center/cover no-repeat
+	height: calc(100vh - 128px)
+	min-height: calc(56.25vh - 128px)
+	max-height: calc(100vw - 128px)
+
+.hero--natural
+	padding: 100px 20px
+	background: url('#{$image-path}/1420x700.png') center/cover no-repeat
+	min-height: 600px
+	@media (min-width: $desktop-lrg-width)
+		min-height: 35vw
+
+// /Hero
+
+.stretch-section
+	flex-grow: 1
+
+.multiple-tile
+	& > .half
+		position: relative
+
+.title-tile
+	position: absolute
+	left: 50%
+	transform: translateX(50%)
+
+.pill
+	border-radius: 10000px
+
+//Chevron CTA
+
+.chev-cta
+	transition: all ease-in-out 300ms
+	i
+		vertical-align: middle
+		margin-left: 5px
+		transition: transform ease-in-out 300ms
+	&:hover
+		& i
+			transform: translateX(4px)
+
+
+// /Chevron CTA
+
+
+// Main CTA
+
+.cta-cont
+	position: relative
+
+.main-cta
+	@include body-font("sml", null, null)
+	background-color: $brand-colour
+	border-radius: 25px
+	padding: 5px 20px
+	display: inline-block
+	transition: all ease-in-out 300ms
+	@include anchor-colour(#FFFFFF)
+	&:hover
+		background-color: $darker-brand-colour
+
+// /Main CTA
+
+//Collaborate CTA
+
+.collaborate-cta
+	text-align: center
+	padding: 40px 5px 45px 5px
+
+.collaborate-cta__title
+	margin-top: 0px
+	@include head-font("sml", null, null)
+
+.collaborate-cta__link
+	background-color: $brand-colour
+	@include anchor-colour(#FFFFFF)
+	padding: 5px 15px
+	&:hover
+		background-color: $darker-brand-colour
+
+// /Collaborate CTA
+
+//Content CTA
+
+.content-cta
+	display: inline-block
+	background-color: $brand-colour
+	padding: 5px 20px
+	@include anchor-colour(#FFFFFF)
+	&:hover
+		background-color: $darker-brand-colour
+
+// /Content CTA
+
+// Masonry
+
+.masonry
+	display: flex
+	flex-wrap: wrap
+
+.masonry-tile
+	box-sizing: border-box
+
+.masonry-tile__inner
+	position: relative
+	width: 100%
+	&:hover
+		.masonry-tile__title::after
+			height: 15px
+
+.masonry-tile__link
+	display: block
+	height: 100%
+
+.masonry-tile__text
+	@include head-font("med", null, null)
+	@media(max-width: $desktop-sml-width)
+		@include head-font("sml", null, null)
+	@media(max-width: $mobile-med-width)
+		font-size: 18px
+
+.masonry-tile__title
+	background-color: rgba(255,255,255,0.8)
+	position: absolute
+	left: 50%
+	bottom: 0
+	width: 85%
+	transform: translateX(-50%)
+	text-align: center
+	position: absolute
+	&::after
+		content: ""
+		transition: height ease-in-out 150ms
+		display: block
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		background-color: #000000
+		height: 5px
+		width: 30%
+
+// /Masonry
+
+//Widths
+
+.full-width
+	width: 100%
+
+.half-width
+	width: 50%
+
+.third-width
+	width: 33.33%
+
+.quarter-width
+	width: 25%
+
+// /Widths
+
+//Text points
+
+.text-point
+	text-align: center
+
+.text-point__cta
+	@include anchor-colour($brand-colour, pink)
+
+// /Text points
+
+//Tile articles
+
+.tile-article__tile
+	position: relative
+	background-color: #FFFFFF
+	max-width: 490px
+
+.tile-article__link
+	display: block
+	&:hover 
+		.tile-article__img-shader
+			background-color: rgba(255,255,255,0.5)
+		.tile-article__content
+			border-bottom-color: $brand-colour
+
+.tile-article__category
+	position: absolute
+	top: 10px
+	right: 10px
+	padding: 5px 12px 5px 12px
+	@include anchor-colour(#FFFFFF)
+	background-color: rgba(100,112,119,0.5)
+	font-size: 12px
+	transition: background-color ease-in-out 300ms
+	&:hover
+		background-color: rgba(100,112,119,1)
+
+.tile-article__img
+	height: 250px
+
+.tile-article__img-shader
+	height: 100%
+	transition: background-color ease-in-out 300ms
+
+.tile-article__content
+	border-bottom: solid 5px $lighter-brand-colour
+	padding: 20px
+	transition: border-color ease-in-out 300ms
+
+.tile-article__date, .tile-article__text
+	color: $text-background
+
+.tile-article__img
+	background: url('#{$image-path}/430x250.png') center/cover no-repeat
+
+.tile-article__tile
+	margin: 0 auto
+
+.blog-tiles__cta
+	text-align: center
+	padding: 40px 0 40px 0
+	margin-bottom: 40px
+
+.tile-article__container
+	padding: 0 10px 0 10px
+
+// /Tile articles
+
+//Section header
+
+.section-header
+	text-align: center
+	background: url('#{$image-path}/icon-logo-centre.svg') center/contain no-repeat
+	margin-top: 60px
+	padding: 10px 0 10px 0
+	margin-bottom: 50px
+
+.section-header__title
+	margin: 0
+	color: $brand-colour
+
+.section-header__desc
+	margin: 0
+	@include head-font("med", null, null)
+
+.section--dark
+	overflow: auto
+	padding-bottom: 50px
+	background-color: rgba(0,0,0,0.5)
+	color: #FFFFFF
+	.section-header
+		background: url('#{$image-path}/icon-logo-centre--white.svg') center/contain no-repeat
+	.section-header__title
+		color: $lighter-brand-colour
+	.section-header__desc
+		@include head-font("med", null, #FFFFFF)
+	p
+		color: #FFFFFF
+
+// /Section header
+
+//Page header
+
+.page-header
+	margin-top: 30px
+	margin-bottom: 30px
+
+// /Page header
+
+//Product snapshots
+
+.product-snapshots
+	display: flex
+	margin-bottom: 30px
+	padding: 0 20px
+	&>:first-child
+		margin-right: 20px
+	@media(max-width: $tablet-med-width)
+		flex-wrap: wrap
+		justify-content: center
+		&>:first-child
+			margin-right: 0px
+		&>:not(:first-child)
+			margin-top: 40px
+
+.product-snapshot
+	display: flex
+	width: 100%
+	@media(max-width: $tablet-med-width)
+		width: 600px
+	@media(max-width: $mobile-lrg-width)
+		flex-direction: column
+		align-items: center
+		max-width: 380px
+
+.product-snapshot__text
+	@media(max-width: $mobile-lrg-width)
+		text-align: center
+
+.product-snapshot__img
+	height: 300px
+	flex-basis: 300px
+	flex-grow: 0
+	flex-shrink: 0
+	border-radius: 100%
+	margin-right: 30px
+	background: url('#{$image-path}/350x300.png') center/cover no-repeat
+	@media(max-width: $desktop-sml-width)
+		height: 200px
+		flex-basis: 200px
+	@media(max-width: $tablet-med-width)
+		height: 160px
+		flex-basis: 160px
+	@media(max-width: $mobile-lrg-width)
+		width: 200px
+		flex-basis: 200px
+		height: 200px
+		margin-right: 0px
+
+.product-snapshot__cta
+	@include anchor-colour($brand-colour)
+	&:hover
+		text-decoration: underline
+
+// /Product snapshots
+
+
+//Tabs
+
+.tabs .tabs__label:not(:first-of-type)
+	@media(max-width: $tablet-med-width)
+		margin-left: 10px
+
+.tabs__tab-img
+	vertical-align: middle
+
+.tabs__tab
+	display: none
+	height: 580px
+	background: url('#{$image-path}/1420x580.png') center/cover no-repeat
+	box-sizing: border-box
+
+.tabs__tab-inner
+	padding-top: 50px
+	display: flex
+	align-items: flex-start
+	&--right
+		justify-content: flex-end
+	&--left
+		justify-content: flex-start
+
+
+.tabs__label
+	cursor: pointer
+	display: inline-block
+
+.tabs__label::before
+	margin-right: 10px
+	font-size: 20px
+	@media(max-width: $tablet-med-width)
+		margin-right: 0px
+		font-size: 40px
+
+.tabs__tab-content
+	width: 400px
+	padding: 20px
+	text-align: left
+	background-color: rgba(255,255,255,0.8)
+
+.tabs__tab-content p:first-child
+	margin-top: 0px
+
+.tabs__text
+	@media(max-width: $tablet-med-width)
+		display: none
+
+// /Tabs
+
+//Text over image
+
+// .toi__container--content
+// 	display: block
+// 	padding: 10px 0
+// 	height: 580px
+// 	box-sizing: border-box
+// 	@media(max-width: $tablet-med-width)
+// 		height: auto
+// 		background-position: center top
+// 		background-size: auto 580px
+// 	@media(max-width: $tablet-xsml-width)
+// 		background-size: auto 380px
+
+// .toi__inner--content
+// 	padding-top: 50px
+// 	display: flex
+// 	align-items: flex-start
+// 	@media(max-width: $tablet-med-width)
+// 		padding-top: 570px
+// 		padding-left: 0
+// 		padding-right: 0
+// 	@media(max-width: $tablet-xsml-width)
+// 		padding-top: 370px
+
+// .toi__content--content
+// 	max-width: 400px
+// 	padding: 20px
+// 	text-align: left
+// 	background-color: rgba(255,255,255,0.8)
+// 	@media(max-width: $tablet-med-width)
+// 		width: 100%
+// 		background-color: #FFFFFF
+
+
+// .toi__container--header
+// 	display: block
+// 	padding: 10px 0
+// 	box-sizing: border-box
+// 	@media(max-width: $tablet-med-width)
+// 		height: auto
+// 		background-position: center top
+// 		background-size: auto 700px
+// 	@media(max-width: $tablet-xsml-width)
+// 		background-size: auto 450px
+
+// .toi__inner--header
+// 	@media(max-width: $tablet-med-width)
+// 		padding-top: 700px
+// 		padding-left: 0
+// 		padding-right: 0
+// 	@media(max-width: $tablet-xsml-width)
+// 		padding-top: 450px
+
+// .toi__content--header
+// 	@media(max-width: $tablet-med-width)
+// 		width: 100%
+// 		background-color: #FFFFFF
+
+// .toi__inner--right
+// 	justify-content: flex-end
+
+
+.toi__container
+	padding: 0 0 0 0
+
+.toi__inner-container
+	height: 100%
+	width: 100%
+	display: flex
+	
+.toi__heading
+	@include head-font("med", null, null)
+	margin: 0
+
+.toi__notes-title
+	margin-bottom: 5px
+
+.toi__para
+	margin-top: 10px
+	margin-bottom: 10px
+
+.toi__inner--right
+	justify-content: flex-end
+
+.toi__inner--left
+	justify-content: flex-start
+
+.toi__inner--centered
+	align-items: center
+
+.toi__inner--natural
+	padding-top: 50px
+	align-items: flex-start
+
+.toi__content
+	max-width: 400px
+	padding: 20px
+	text-align: left
+	background-color: rgba(255, 255, 255, 0.8)
+
+.toi__content p:first-child
+	margin-top: 0px
+
+.hero.toi-header
+	height: 700px
+	padding: 0
+	@media(max-width: $tablet-med-width)
+		height: auto
+		background-position: center top
+		background-size: auto 600px
+	@media(max-width: $tablet-xsml-width)
+		background-size: auto 500px
+	.toi__inner-container
+		@media(max-width: $tablet-med-width)
+			padding: 600px 0 0 0
+		@media(max-width: $tablet-xsml-width)
+			padding: 500px 0 0 0
+	.toi__content
+		@media(max-width: $tablet-med-width)
+			max-width: 100%
+			width: 100%
+
+
+.toi-body
+	@media(max-width: $tablet-med-width)
+		height: auto
+		background-position: center top
+		background-size: auto 580px
+	@media(max-width: $tablet-xsml-width)
+		background-size: auto 380px
+	.toi__inner-container
+		@media(max-width: $tablet-med-width)
+			padding: 580px 0 0 0
+		@media(max-width: $tablet-xsml-width)
+			padding: 380px 0 0 0
+	.toi__content
+		@media(max-width: $tablet-med-width)
+			max-width: 100%
+			width: 100%
+
+
+// /Text over image
+
+
+//Accordion
+
+.accordion
+	list-style: none
+	padding-left: 0
+
+.accordion__toggle
+	display inline-block
+	float: right
+
+.accordion__read
+	display: inline-block
+
+
+// /Accordion
+
+//js
+
+.show
+	display: block
+
+.hide
+	display: none
+
+// /js
+
+//Form fields
+
+.input-field
+	width: 100%
+	-webkit-appearance: none
+	box-sizing: border-box
+	border: none
+	background-color: transparent
+	border-bottom: 1px solid $quarternary-colour
+	@include body-font("med", null, $text-background)
+	display: block
+	&:focus
+		outline: none
+		border-bottom: 1px solid #000000
+		@include body-font("med", null, #000000)
+
+.input-label
+	margin-bottom: 10px
+	display: block
+	@include body-font("med", null, null)
+
+
+textarea
+	box-sizing: border-box
+
+// /Form fields
+
+//Close button
+
+.close-button
+	position: absolute
+	top: 0
+	right: 0
+	padding: 20px
+
+.close-button__text
+	cursor: pointer
+	@include body-font("sml", 500, null)
+	i 
+		color: $brand-colour
+		font-size: 24px
+		vertical-align: middle
+
+// /Close button
+
+//Error messages
+
+.label-input__wrapper
+	position: relative
+
+.label-input__error
+	display: block
+	position: absolute
+	top: 100%
+	right: 0
+	padding-top: 5px
+	@include body-font("sml", 500, $brand-colour)
+
+.input-field--error
+	border-bottom-color: $error-colour
+	&:focus
+		border-bottom-color: $error-colour
+
+
+
+// /Error messages

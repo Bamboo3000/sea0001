@@ -1,0 +1,21 @@
+# System Files
+.idea
+.DS_Store
+
+# Node stuff
+**/node_modules
+**/.sass-cache
+
+# The Wordpress Build
+vendor
+public/wp-core
+public/wp-core/*
+public/wp-core/**
+
+public/wp-app/plugins/*
+!public/wp-app/plugins/index.php
+public/wp-app/mu-plugins/*
+!public/wp-app/mu-plugins/*.php
+public/wp-app/uploads/*
+!public/wp-app/uploads/index.php
+wp-cli.local.yml

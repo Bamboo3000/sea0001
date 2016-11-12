@@ -1,0 +1,14 @@
+/**
+ * This is the main scss file for the build.
+ *
+ * In an ideal world, you would only need to make modifications to the prototype scss files.
+ * Then you could import them with the command: gulp import-sass
+ *
+ * @author Mwayi Dzanjalimodzi <mwayi@smrtr.co.uk>
+ */
+
+$image-path: '/assets/img';
+
+@import "prototype/app";
+
+@import "custom";

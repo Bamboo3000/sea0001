@@ -1,0 +1,15 @@
+{
+	// "c2a": {
+	// 	"template": ["tpl-default.php", "home-page.php", "page.php"]
+	// },
+	// "related-pages": {
+	// 	"template": ["tpl-default.php", "tpl-benefits-and-services.php", "home-page.php", "page.php"]
+	// },
+	// "editor": {
+	// 	"template": ["tpl-default.php", "home-page.php", "page.php"],
+	// 	"type":  ["page"]
+	// },
+	// "hero" : {
+	// 	"template" : ["tpl-blog.php", "tpl-work.php", "tpl-contact.php"]
+	// }
+}

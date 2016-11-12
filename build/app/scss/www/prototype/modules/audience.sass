@@ -1,0 +1,90 @@
+.accordion
+	.accordion__inner
+		display: none
+		text-align: center
+		width: 100%
+		padding-top: 10px
+
+
+	.accordion__img
+		max-width: 350px
+		max-height: 300px
+		margin-left: 10px
+		width: 100%
+
+	.accordion__img--right
+		float: right
+
+	@media(max-width: $tablet-sml-width)
+		.accordion__img--right, .accordion__img
+			float: none
+			margin-left: 0
+			margin-bottom: 10px
+
+	.accordion__cta
+		margin: 10px 0 30px 0
+		display: inline-block
+
+	.accordion__text
+		text-align: left
+
+	.accordion__inner .accordion__text:first-of-type
+		margin-top: 0
+
+	.accordion__read
+		padding-left: 30px
+		position: relative
+		margin: 0
+		&::before
+			content: ""
+			height: 22px
+			width: 12px
+			display: block
+			position: absolute
+			left: 0
+			top: calc(50% - 11px)
+		@include head-font("sml", null, null)
+
+	.accordion__read--bars::before
+		background-color: $bars-colour
+
+	.accordion__read--drinks::before
+		background-color: $drinks-colour
+
+	.accordion__read--ingredients::before
+		background-color: $ingredients-colour
+
+	.accordion__read--supplements::before
+		background-color: $supplements-colour
+
+
+
+	.accordion__toggle
+		margin-top: 7px
+		line-height: 32px
+		@include anchor-colour($brand-colour)
+		@include notes-font(null, null)
+		@media(max-width: $tablet-sml-width)
+			margin-top: 3px
+		span
+			@include notes-font(null, null)
+
+	.accordion__arrow
+		margin-left: 10px
+		transition: transform ease-in-out 300ms
+		transform-origin: 5px 7px
+		&.rotate
+			transform: rotateZ(90deg)
+
+	.accordion__less
+		display: none
+
+	.accordion__toggle-item
+		border-top: 1px solid $brand-colour
+		position: relative
+		padding: 30px 0 10px 0
+		& > p
+			margin-bottom: 20px
+
+	.accordion__toggle-item:last-child
+		border-bottom: 1px solid $brand-colour
