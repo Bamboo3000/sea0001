@@ -13,5 +13,5 @@
  */
 
 return [
-    PUBLIC_PATH.'/wp-core/wp-content'                       => PUBLIC_PATH.'/wp-app',
+    PUBLIC_PATH.'/wp-core/wp-content' => PUBLIC_PATH.'/wp-app',
 ];

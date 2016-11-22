@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php wp_title(); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +31,6 @@
     <!--*(_()()  He can be really CrAzY!#$%&@%$ -->
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Nothing+You+Could+Do|Poppins:300,500" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="/assets/css/www/build.css" rel="stylesheet">
     <style>
@@ -50,10 +49,10 @@
   </div>
   <!-- JavaScript -->
   <?php if ($this->config('minifiedAssets', false)): ?>
-    <script src="/assets/js/www/app.min.js" defer></script>
+    <script src="/assets/js/www/app.min.js"></script>
   <?php else: ?>
-    <script src="/assets/js/www/libs.min.js" defer></script>
-    <script src="/assets/js/www/app.js" defer></script>
+    <script src="/assets/js/www/libs.min.js"></script>
+    <script src="/assets/js/www/app.js"></script>
   <?php endif; ?>
   <?php /* $this->partial('google-analytics'); */?>
   <?php wp_footer()?>

@@ -1,0 +1,38 @@
+.universal-container {
+	.universal-section {
+		.universal-right-column {
+			min-height: 230px;
+			padding: 50px;
+
+			@media(max-width: 1024px) {
+				padding: 30px;
+			}
+
+			@media(max-width: 799px) {
+				padding: 30px 20px;
+			}
+
+		}
+		&:nth-child(odd) {
+			background-color: $lgrey;
+			.universal-left-column {
+				background-color: $lgrey;
+				color: $dgrey !important;
+			}
+			.universal-right-column {
+				background-color: white;
+			}
+		}
+		&:nth-child(even) {
+			background-color: $dgrey;
+			.universal-left-column {
+				background-color: $dgrey;
+				color: white !important;
+			}
+			.universal-right-column {
+				background-color: $lgrey;
+				color: $grey !important;
+			}
+		}
+	}
+}

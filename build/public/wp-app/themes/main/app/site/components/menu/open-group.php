@@ -1,5 +1,5 @@
 <?php if($depth == 0): ?>
-<ul class="main-nav__list">
+<ul class="main-menu">
 <?php else: ?>
-<ul>
+<ul class="sub-menu">
 <?php endif; ?>

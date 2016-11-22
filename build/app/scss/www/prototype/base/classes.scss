@@ -1,0 +1,35 @@
+.bg-lgrey {
+	background-color: $lgrey;
+}
+
+.bg-dgrey {
+	background-color: $dgrey;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.flag-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.6em;
+  line-height: 1.3em;
+}
+.flag-icon:before {
+  content: "\00a0";
+}
+.flag-icon-en {
+	background-image: url('#{$image-path}/gb.svg');
+}
+.flag-icon-nl {
+	background-image: url('#{$image-path}/nl.svg');
+}

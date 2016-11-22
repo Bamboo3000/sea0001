@@ -21,15 +21,15 @@ $this->service->registerFactory('helper.sea0001.misc', function(){
 });
 
 $this->service('admin.setup')->registerSamplePermalink(function($post, $url, $permalink){
-	if(in_array($post->post_type, ['news', 'expertise', 'blog'])) {
+	if(in_array($post->post_type, ['jobs'])) {
 		return $url . '/' . $post->post_type . '/' . $post->post_name;
 	}
-	elseif(in_array($post->post_type, ['case-study'])) {
-		return $url . '/case-studies/' . $post->post_name;
-	}
-	elseif(in_array($post->post_type, ['team'])) {
-		return $url . '/our-team'; // change this according to site map
-	}
+	// elseif(in_array($post->post_type, ['case-study'])) {
+	// 	return $url . '/case-studies/' . $post->post_name;
+	// }
+	// elseif(in_array($post->post_type, ['team'])) {
+	// 	return $url . '/our-team'; // change this according to site map
+	// }
 	return $permalink;
 });
 
@@ -48,3 +48,16 @@ function add_svg_to_upload_mimes( $upload_mimes ) {
 	return $upload_mimes;
 }
 add_filter( 'upload_mimes', 'add_svg_to_upload_mimes', 10, 1 );
+
+// remove feature images
+add_action('do_meta_boxes', function (){
+    remove_meta_box( 'postimagediv','post','side' );
+    remove_meta_box( 'postimagediv','page','side' );
+});
+
+add_action( 'init', 'my_custom_init' );
+function my_custom_init() {
+	remove_post_type_support( 'page', 'editor' );
+}
+
+define('FS_METHOD', 'direct');

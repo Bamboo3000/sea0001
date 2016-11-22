@@ -25,13 +25,13 @@ return [
 
     'bootstrap' => [
         'constants' => [
-            'SMRTR_WP_VANILLA' => true,
+            'SMRTR_WP_VANILLA' => true
         ],
         'app' => [
             'enforceHttps'  => false,
-            'useCache'      => false,
+            'useCache'      => false
         ],
-        'dbprefix'  => 'searchit_',
+        'dbprefix'  => 'searchit_'
     ],
 
     'development' => [
@@ -41,7 +41,7 @@ return [
         'dbhost'    => '23157.m.tld.pl',
         'dbname'    => 'baza23157_searchit',
         'dbpass'    => '4Rb{rPiL6Q',
-        'dbuser'    => 'admin23157_searchit',
+        'dbuser'    => 'admin23157_searchit'
     ],
 
     'dev_jacob' => [
@@ -51,7 +51,7 @@ return [
         'dbname'    => 'db_dev_sea0001',
         'dbpass'    => 'mamp',
         'dbuser'    => 'root',
-        'debug'     => true,
+        'debug'     => true
     ]
 
 ];

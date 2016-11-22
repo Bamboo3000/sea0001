@@ -1,6 +1,6 @@
 <?php 
 
-namespace Services\Opa0007;
+namespace Services\Sea0001;
 
 use Swift_Mailer as Mailer;
 use Swift_Message as Message;

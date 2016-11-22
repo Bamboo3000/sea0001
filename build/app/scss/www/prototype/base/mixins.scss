@@ -1,0 +1,39 @@
+@mixin trans($time) {
+  -webkit-transition: all $time ease;
+  -moz-transition: all $time ease;
+  -ms-transition: all $time ease;
+  -o-transition: all $time ease;
+  transition: all $time ease;
+}
+
+@mixin transformY($trans) {
+  -moz-transform: translateY($trans);
+  -webkit-transform: translateY($trans);
+  -o-transform: translateY($trans);
+  -ms-transform: translateY($trans);
+  transform: translateY($trans);
+}
+
+@mixin transformX($trans) {
+  -moz-transform: translateX($trans);
+  -webkit-transform: translateX($trans);
+  -o-transform: translateX($trans);
+  -ms-transform: translateX($trans);
+  transform: translateX($trans);
+}
+
+@mixin transformA($trans1, $trans2, $trans3) {
+  -moz-transform: rotate($trans1) translateX($trans2) translateY($trans3);
+  -webkit-transform: rotate($trans1) translateX($trans2) translateY($trans3);
+  -o-transform: rotate($trans1) translateX($trans2) translateY($trans3);
+  -ms-transform: rotate($trans1) translateX($trans2) translateY($trans3);
+  transform: rotate($trans1) translateX($trans2) translateY($trans3);
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

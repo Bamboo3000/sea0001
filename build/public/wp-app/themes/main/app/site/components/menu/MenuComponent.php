@@ -19,6 +19,8 @@ class MenuComponent extends \Foundation\Component
      */
     protected $display = true;
 
+    protected $menu_lang;
+
     /**
      * Component constructor.
      *
@@ -28,16 +30,15 @@ class MenuComponent extends \Foundation\Component
     public function __construct(\Foundation\Controller $controller, array $parameters)
     {
         parent::__construct($controller, $parameters);
-
         $this->setMenu();
     }
 
-
     public function dispatch()
     {
-        //parent::dispatch();
         echo $this->menu;
     }
+
+    
 
     /**
      * Set Menu
@@ -46,7 +47,13 @@ class MenuComponent extends \Foundation\Component
      */
     protected function setMenu()
     {
-        $this->menu = $this->application->helper('menu')->setMenu('main-menu')->loop([
+        if(get_bloginfo('language') == 'nl-NL') {
+            $menu_lang = 'main-menu-nederlands';
+        } elseif(get_bloginfo('language') == 'en-GB') {
+            $menu_lang = 'main-menu-english';
+        }
+
+        $this->menu = $this->application->helper('menu')->setMenu($menu_lang)->loop([
             'openGroup' => function($items, $depth) {
                 require __DIR__ . '/open-group.php';
             },

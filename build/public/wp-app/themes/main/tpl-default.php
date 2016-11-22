@@ -1,6 +1,6 @@
 <?php 
 /* 
-* Template Name: Default 
+* Template Name: Universal
 
  ()()		That's an indentation bunny.
  ('.')		He's here to protect this file for propper indentation.

@@ -27,22 +27,22 @@ class MiscHelper extends \Foundation\Helper\AbstractHelper
 
         $url = get_bloginfo('url');
 
-        $articleType = $this->helper('arrays')->get($post->meta, 'scope_type', 'article');
+        // $articleType = $this->helper('arrays')->get($post->meta, 'scope_type', 'article');
 
-        switch($post->post_type) {
-            case 'article':
-            $permalink = ($scope === 'vet'? 'news-hub': 'rossdales-laboratories/news-hub') . '/' . $articleType;
-            break;
-            case 'event':
-            $permalink = ($scope === 'vet'? 'news-hub': 'rossdales-laboratories/news-hub') . '/' . $post->post_type;
-            break;
-            case 'team':
-            $permalink = ($scope === 'vet'? 'about-us/our-team': 'rossdales-laboratories/about-us/our-team');
-            break;
-            default:
-            $permalink = ($scope === 'vet'? $post->post_type: 'rossdales-laboratories') . '/' . $articleType;
-            break;
-        }
+        // switch($post->post_type) {
+        //     case 'article':
+        //     $permalink = ($scope === 'vet'? 'news-hub': 'rossdales-laboratories/news-hub') . '/' . $articleType;
+        //     break;
+        //     case 'event':
+        //     $permalink = ($scope === 'vet'? 'news-hub': 'rossdales-laboratories/news-hub') . '/' . $post->post_type;
+        //     break;
+        //     case 'team':
+        //     $permalink = ($scope === 'vet'? 'about-us/our-team': 'rossdales-laboratories/about-us/our-team');
+        //     break;
+        //     default:
+        //     $permalink = ($scope === 'vet'? $post->post_type: 'rossdales-laboratories') . '/' . $articleType;
+        //     break;
+        // }
 
         return $url . '/' . $permalink . '/' . $post->post_name;
     }
@@ -116,7 +116,7 @@ class MiscHelper extends \Foundation\Helper\AbstractHelper
      */
     public function getTopCategory($postId) 
     {   
-        $categories = (array)$this->helper('posts')->getPostCategory($postId, ['blog-category']);
+        $categories = (array)$this->helper('posts')->getPostCategory($postId, ['job-category']);
         $top = array_shift($categories);
         if($top) {
             return $top->name;

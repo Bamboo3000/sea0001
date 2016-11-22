@@ -1,4 +1,4 @@
 <?php
 return [
-	['GET','/blog/[*:slug]', 'CustomDetail#index'], // changed from news to blog
+	['GET','/jobs/[*:slug]', 'CustomDetail#index']
 ];

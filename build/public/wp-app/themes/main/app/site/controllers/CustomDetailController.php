@@ -95,9 +95,6 @@ class CustomDetailController extends PageController
 	{
 		$segments = $this->helper('urls')->getUrlSegments();
 		$postType = isset($segments[0])? $segments[0]: null;
-		if('case-studies' === $postType) {
-			return 'case-study';
-		}
 		return $postType;
 	}
 }

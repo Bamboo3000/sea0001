@@ -1,0 +1,19 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css';
+
+@import "base/columns";
+@import "base/variables";
+@import "base/mixins";
+@import "base/classes";
+@import "base/layout";
+
+/* Modules, or objects. */
+@import "modules/circles";
+@import "modules/owl-carousel";
+@import "modules/navbar";
+@import "modules/footer";
+@import "modules/forms";
+@import "modules/home";
+@import "modules/job";
+@import "modules/team";
+@import "modules/universal";
+@import "modules/others";

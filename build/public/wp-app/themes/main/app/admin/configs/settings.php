@@ -2,7 +2,7 @@
 
 $settings = [
 	'menus' => [
-		'main-menu' => 'Main Menu',
+		'main-menu' => 'Main Menu'
 	],
   	'scripts' => [],
 	'ux' => [
@@ -22,43 +22,43 @@ $settings = [
 		'hide_menu_links' => true,
 		'hide_menu_comments' => true,
 		'hide_menu_posts' => true,
-		'filter_footer' => 'Built by <a href="http://www.jacbodeveloper.com">jacobdeveloper.com</a>',
+		'filter_footer' => 'Built by <a href="http://www.jacobdeveloper.com">jacobdeveloper.com</a>'
 	],
 	'images' => [
 		'featured' => true,
 		'sizes' => [
-			// 'hero-large' => [1920, 950, true, 'Hero Large'],
+			'hero-large' => [1920, 1200, true, 'Hero Large']
 			// 'home-grid-small' => [400, 343, true, 'Home Grid Small'],
 			// 'home-grid-big' => [810, 705, true, 'Home Grid Big'],
 			// 'card-image' => [430, 250, true, 'Card image 430x250']
 		],
-		'remove_default_sizes' => true,
+		'remove_default_sizes' => true
 	],
-	// 'post_types' => [
-	// 	'blog' => [
-	// 		'title_single' => 'Blog',
-	// 		'title_plural' => 'Blog',
-	// 		'capability_type' => 'post',
-	// 		'hierarchial' => true,
-	// 		'supports' => ['title', 'editor'],
-	// 		'menu_position' => true,
-	// 		'publicly_queryable' => true,
-	// 		'rewrite' => false,
-	// 		'has_archive' => false,
-	// 		'taxonomies' => ['blog-category']
-	// 	]
-	// ],
-	// 'taxonomies' => [
-	// 	'blog-category' => [
-	// 		'posts' => ['blog'],
-	// 		'title_single' => 'Category',
-	// 		'title_plural' => 'Categories',
-	// 		'hierarchical' => false,
-	// 		'show_ui' => true,
-	// 		'show_admin_column' => true,
-	// 		'query_var' =>  true
-	// 	]
-	// ]
+	'post_types' => [
+		'jobs' => [
+			'title_single' => 'Job',
+			'title_plural' => 'Jobs',
+			'capability_type' => 'post',
+			'hierarchial' => true,
+			'supports' => ['title', 'editor'],
+			'menu_position' => true,
+			'publicly_queryable' => true,
+			'rewrite' => false,
+			'has_archive' => false,
+			'taxonomies' => ['job-category']
+		]
+	],
+	'taxonomies' => [
+		'job-category' => [
+			'posts' => ['jobs'],
+			'title_single' => 'Category',
+			'title_plural' => 'Categories',
+			'hierarchical' => false,
+			'show_ui' => true,
+			'show_admin_column' => true,
+			'query_var' =>  true
+		]
+	]
 ];
 
 return $settings;
