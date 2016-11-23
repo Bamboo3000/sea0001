@@ -13,7 +13,7 @@
 		<tr>
 			<td valign="top" class="label">Summary</td>
 			<td>
-				<?=$form->richtext('title_' . $i)->setStyle(['width' => '100%'])->toHtml(); ?>
+				<?=$form->richtext('summary_' . $i)->setStyle(['width' => '100%'])->toHtml(); ?>
 			</td>
 		</tr>
 		<tr>

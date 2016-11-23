@@ -56,7 +56,7 @@ $settings = [
 			'hierarchical' => false,
 			'show_ui' => true,
 			'show_admin_column' => true,
-			'query_var' =>  true
+			'query_var' => true
 		]
 	]
 ];

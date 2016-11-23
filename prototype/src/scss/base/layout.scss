@@ -143,6 +143,11 @@ svg {
 	vertical-align: middle;
 }
 
+object,
+svg {
+	pointer-events: none;
+}
+
 picture {
 	display: block;
 }

@@ -2,7 +2,7 @@
 	<div class="main-navigation-top-bar">
 		<div class="container">
 			<div class="logo">
-				<a href="/<?php // icl_get_home_url(); ?>">
+				<a href="/<?php // icl_get_home_url(); ?>" style="display:block;">
 					<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 width="147px" height="50px" viewBox="0 0 147 50" enable-background="new 0 0 147 50" xml:space="preserve">
 					<g>

@@ -27,7 +27,7 @@ class Sea0001TestimonialsComponent extends \Foundation\Component
     /**
      * @var integer Total items
      */
-    protected $total = 0;
+    protected $total = 10;
 
     /**
      * @var array|false Only display the markup if there are items
@@ -53,7 +53,7 @@ class Sea0001TestimonialsComponent extends \Foundation\Component
      */
     public function setCollection()
     {
-    	$this->items = $this->application->helper('posts')->getSortableMeta('info_panels', $this->defaults);
+    	$this->items = $this->application->helper('posts')->getSortableMeta('testimonials', $this->defaults);
        
     	if($this->total = count($this->items)) {
     		$this->display = true;

@@ -27,23 +27,6 @@ class MiscHelper extends \Foundation\Helper\AbstractHelper
 
         $url = get_bloginfo('url');
 
-        // $articleType = $this->helper('arrays')->get($post->meta, 'scope_type', 'article');
-
-        // switch($post->post_type) {
-        //     case 'article':
-        //     $permalink = ($scope === 'vet'? 'news-hub': 'rossdales-laboratories/news-hub') . '/' . $articleType;
-        //     break;
-        //     case 'event':
-        //     $permalink = ($scope === 'vet'? 'news-hub': 'rossdales-laboratories/news-hub') . '/' . $post->post_type;
-        //     break;
-        //     case 'team':
-        //     $permalink = ($scope === 'vet'? 'about-us/our-team': 'rossdales-laboratories/about-us/our-team');
-        //     break;
-        //     default:
-        //     $permalink = ($scope === 'vet'? $post->post_type: 'rossdales-laboratories') . '/' . $articleType;
-        //     break;
-        // }
-
         return $url . '/' . $permalink . '/' . $post->post_name;
     }
 

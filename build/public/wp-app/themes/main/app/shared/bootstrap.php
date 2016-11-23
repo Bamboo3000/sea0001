@@ -10,10 +10,10 @@ $this->helper('urls')->enforceHttps();
 
 $this->addPath('app.configFile', $this->path('shared.configs', 'application.php'));
 
-$this->service->registerFactory('helper.social', function(){
-	require_once $this->path('shared', 'services/Social.php');
-	return new \Services\SocialHelper($this);
-});
+// $this->service->registerFactory('helper.social', function(){
+// 	require_once $this->path('shared', 'services/Social.php');
+// 	return new \Services\SocialHelper($this);
+// });
 
 $this->service->registerFactory('helper.sea0001.misc', function(){
 	require_once $this->path('shared', 'services/Misc.php');
@@ -24,12 +24,6 @@ $this->service('admin.setup')->registerSamplePermalink(function($post, $url, $pe
 	if(in_array($post->post_type, ['jobs'])) {
 		return $url . '/' . $post->post_type . '/' . $post->post_name;
 	}
-	// elseif(in_array($post->post_type, ['case-study'])) {
-	// 	return $url . '/case-studies/' . $post->post_name;
-	// }
-	// elseif(in_array($post->post_type, ['team'])) {
-	// 	return $url . '/our-team'; // change this according to site map
-	// }
 	return $permalink;
 });
 

@@ -17,7 +17,7 @@ if($this->isEnv('dev_jacob'))
 
 if($this->isEnv('development')) 
 {
-    $configs['enforceHttps'] = false;
+    $configs['enforceHttps'] = true;
 }
 
 if($this->isEnv('production')) 

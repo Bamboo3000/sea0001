@@ -4,10 +4,10 @@
 			<aside>
 				<hr>
 				<span>
-					<?= $this->titles_left_main_title; ?>
+					<?= $this->controller->titles_main_title; ?>
 				</span>
 				<h2>
-					<?= $this->titles_left_sub_title; ?>
+					<?= $this->controller->titles_sub_title; ?>
 				</h2>
 			</aside>
 		</div>
@@ -19,7 +19,7 @@
 					<div class="col-xxl-7-of-10 col-xl-9-of-10 col-xs-1-of-1">
 						<?= $item->summary; ?>
 						<p class="signature">
-							<?= $item->author; ?>
+							<?= $item->author; ?> - <?= ucwords($item->type); ?>
 						</p>
 					</div>
 			    </div>

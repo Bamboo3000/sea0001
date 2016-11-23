@@ -32,29 +32,27 @@
 		</div>
 		<div class="col-l-3-of-4 col-m-2-of-3 col-xs-1-of-1">
 			<div class="row categories-list">
-				<?php /*
-					$args = array(
-						'hide_empty' => 0
-					);
+				<?php 
+					$terms = get_terms('job-category', array('hide_empty' => false));
 				 ?>
-				 <?php foreach (get_categories($args) as $cat) : ?>
-						<?php if(z_taxonomy_image_url($cat->term_id)) : ?>
+				 <?php foreach ($terms as $cat) : ?>
+						<?php if (function_exists('z_taxonomy_image_url')): ?>
 						<div class="col-xl-1-of-3 col-s-1-of-2 col-xs-1-of-1 the-category">
 							<figure>
-								<a href="<?php echo get_category_link($cat->term_id); ?>">
-									<img src="<?php echo z_taxonomy_image_url($cat->term_id); ?>" />
+								<a href="<?=get_bloginfo('url');?>/jobs?job_category=<?=$cat->name;?>">
+									<img src="<?= z_taxonomy_image_url($cat->term_id); ?>" />
 								</a>
 								<figcaption>
-									<?php if(ICL_LANGUAGE_CODE == 'en') : ?>
-										<a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->cat_name; ?> Jobs</a>
+									<?php if(true) : ?>
+										<a href="<?=get_bloginfo('url');?>/jobs?job_category=<?=$cat->name;?>"><?php echo $cat->name; ?> Jobs</a>
 									<?php else : ?>
-										<a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->cat_name; ?> Vacatures</a>
+										<a href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->name; ?> Vacatures</a>
 									<?php endif; ?>
 								</figcaption>
 							</figure>
 						</div>
 					<?php endif; ?>
-				<?php endforeach; */?>
+				<?php endforeach; ?>
 			</div>	
 		</div>
 	</div>

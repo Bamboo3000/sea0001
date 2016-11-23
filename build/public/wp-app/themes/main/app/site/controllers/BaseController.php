@@ -91,15 +91,5 @@ class BaseController extends \Foundation\Controller
         $this->_id          = $this->ID;
         $this->_post_name   = $this->post_name;
         $this->_post_title  = $this->post_title;
-
-        if('team' === $this->post_type && $this->post_parent) {
-            if(($post = get_post($this->post_parent))) {
-                $this->_post_parent = $post->post_parent;
-                $this->_id          = $post->ID;
-                $this->_post_name   = $post->post_name;
-                $this->_post_title  = $post->post_title;
-                $this->page_summary = $this->post_title;
-            }
-        }
     }
 }
