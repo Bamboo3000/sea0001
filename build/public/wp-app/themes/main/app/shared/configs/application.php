@@ -6,8 +6,7 @@ $configs = [
     'doGoogleAnalytics' => false,
     'redirectToTarget' => false,
     'minifiedAssets' => false,
-    'useCache' => false,
-    'debugSql' => true
+    'useCache' => false
 ];
 
 if($this->isEnv('dev_jacob')) 
@@ -18,6 +17,7 @@ if($this->isEnv('dev_jacob'))
 if($this->isEnv('development')) 
 {
     $configs['enforceHttps'] = true;
+    $configs['redirectToTarget']  = true;
 }
 
 if($this->isEnv('production')) 
