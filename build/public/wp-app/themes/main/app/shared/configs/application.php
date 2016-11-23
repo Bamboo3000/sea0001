@@ -16,8 +16,8 @@ if($this->isEnv('dev_jacob'))
 
 if($this->isEnv('development')) 
 {
-    $configs['enforceHttps'] = true;
-    $configs['redirectToTarget']  = true;
+    $configs['enforceHttps'] = false;
+    $configs['redirectToTarget']  = false;
 }
 
 if($this->isEnv('production')) 
